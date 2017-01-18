@@ -447,7 +447,7 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="dg9-R3-Y9r" id="xkQ-gf-gDz"/>
+                            <outlet property="dataSource" destination="dg9-R3-Y9r" id="ftM-q3-DMl"/>
                             <outlet property="delegate" destination="dg9-R3-Y9r" id="Erp-ro-Way"/>
                         </connections>
                     </tableView>

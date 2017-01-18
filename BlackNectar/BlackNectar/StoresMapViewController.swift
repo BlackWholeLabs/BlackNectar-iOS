@@ -149,7 +149,7 @@ extension StoresMapViewController {
         let annotation = annotation as? CustomAnnotation
         let smallSquare = CGSize(width: 30, height: 30)
         let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-        let blackNectarPin = UIImage(named: "BlackMapPin")
+        let blackNectarPin = UIImage(named: "NectarMapPin")
         let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotation?.identifier)
 
         button.setBackgroundImage(UIImage(named: "carIcon"), for: .normal)

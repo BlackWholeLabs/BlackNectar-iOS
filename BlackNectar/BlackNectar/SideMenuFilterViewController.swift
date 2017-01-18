@@ -37,13 +37,14 @@ class SideMenuFilterViewController: UITableViewController {
     var isStore = false
     var isOpenNow = false
     var delegate: SideMenuFilterDelegate?
-    
+    var defaults: [String : Any] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         styleMenu()
-
+        loadsDefaults()
+        
     }
 
     func passingDistance() -> Double {
@@ -53,7 +54,7 @@ class SideMenuFilterViewController: UITableViewController {
     }
     
     @IBAction func sliderDidSlide(_ sender: UISlider) {
-
+        
         distanceFilter = Double(slider.value)
         
         let roundedNumber = (round(distanceFilter * 100)/100)
@@ -72,7 +73,7 @@ class SideMenuFilterViewController: UITableViewController {
             isOpenNow = true
 
         } else {
-
+            
             isOpenNow = false
             
         }
@@ -122,6 +123,8 @@ class SideMenuFilterViewController: UITableViewController {
     }
     
     @IBAction func applyButton(_ sender: UIButton) {
+        
+        UserPreferences.instance.setUserPreferences(distanceFilter: distanceFilter, isRestaurant: isRestaurant, isOpenNow: isOpenNow, isStore: isStore)
         
         self.delegate?.didApplyFilters(self, restaurants: self.isRestaurant, stores: self.isStore, openNow: self.isOpenNow, distanceInMiles: Int(self.distanceFilter))
         AromaClient.beginMessage(withTitle: "Apply Button Selected")
@@ -187,4 +190,21 @@ extension SideMenuFilterViewController {
 
     }
 
+}
+
+extension SideMenuFilterViewController {
+    
+    func loadsDefaults() {
+        
+        defaults = UserPreferences.instance.loadDefaults()
+        
+        distanceFilter = defaults["distanceFilter"] as! Double
+        isRestaurant = defaults["showRestaurants"] as! Bool
+        isOpenNow = defaults["onlyShowOpenStores"] as! Bool
+        isStore = defaults["showStores"] as! Bool
+
+        UserPreferences.instance.setSideMenuDefaults(viewController: self, distanceFilter: distanceFilter, isRestaurant: isRestaurant, isOpenNow: isOpenNow, isStore: isStore)
+        
+    }
+    
 }

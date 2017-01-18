@@ -41,6 +41,7 @@
 		32E1344F1E15FEE600FD65DC /* SWRevealController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32E134401E15FE6700FD65DC /* SWRevealController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		32E134551E160EAF00FD65DC /* TimeIntervals+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E134541E160EAF00FD65DC /* TimeIntervals+.swift */; };
 		32E134561E160EAF00FD65DC /* TimeIntervals+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E134541E160EAF00FD65DC /* TimeIntervals+.swift */; };
+		36289FB81E2FEEA300FCA6E1 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36289FB71E2FEEA300FCA6E1 /* UserPreferences.swift */; };
 		36E2FA651E299666001F1FB9 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2FA641E299666001F1FB9 /* CustomAnnotation.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		32E134401E15FE6700FD65DC /* SWRevealController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWRevealController.framework; path = Carthage/Build/iOS/SWRevealController.framework; sourceTree = "<group>"; };
 		32E134511E160E5500FD65DC /* Integers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integers+.swift"; sourceTree = "<group>"; };
 		32E134541E160EAF00FD65DC /* TimeIntervals+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeIntervals+.swift"; sourceTree = "<group>"; };
+		36289FB71E2FEEA300FCA6E1 /* UserPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPreferences.swift; path = ../UserPreferences.swift; sourceTree = "<group>"; };
 		36E2FA641E299666001F1FB9 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,11 +182,12 @@
 				327BAD601DF44B5A000EA25E /* SideMenus */,
 				327BAD5F1DF44B3F000EA25E /* StoresListTableView */,
 				3213193D1DE0F61500FB1774 /* AppDelegate.swift */,
+				321319441DE0F61500FB1774 /* Assets.xcassets */,
 				0A726B491E1D94B40031572D /* DistanceCalculation.swift */,
 				321319411DE0F61500FB1774 /* Main.storyboard */,
 				321319461DE0F61500FB1774 /* LaunchScreen.storyboard */,
 				321319491DE0F61500FB1774 /* Info.plist */,
-				321319441DE0F61500FB1774 /* Assets.xcassets */,
+				36289FB71E2FEEA300FCA6E1 /* UserPreferences.swift */,
 			);
 			path = BlackNectar;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				327BAD661DFA26AE000EA25E /* RoundedButtonView.swift in Sources */,
 				32B079791DEF8B7A00FACD1B /* StoresTableViewCell.swift in Sources */,
 				0A726B4A1E1D94B40031572D /* DistanceCalculation.swift in Sources */,
+				36289FB81E2FEEA300FCA6E1 /* UserPreferences.swift in Sources */,
 				3213ABC11DED0B4D004ECB92 /* GlobalLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
